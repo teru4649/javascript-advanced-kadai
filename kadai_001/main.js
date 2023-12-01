@@ -9,6 +9,7 @@ const typedfield = document.getElementById('typed');
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
 const count = document.getElementById('count');
+const typedcount = document.getElementById('typedcount');
 
 // 複数のテキストを格納する配列
 const textLists = [
@@ -40,6 +41,7 @@ const createText = () => {
   // 配列からランダムにテキストを取得し画面へ表示
   untyped = textLists[random];
   untypedfield.textContent = untyped;
+
 };
 
 // キー入力の判定
@@ -63,6 +65,9 @@ const keyPress = e => {
   untyped = untyped.substring(1);
   typedfield.textContent = typed;
   untypedfield.textContent = untyped;
+  
+  // タイプ数を画面へ表示
+  typedcount.textContent = score;
 
   // テキストを全て入力後、新しいテキストを表示
   if(untyped == ''){

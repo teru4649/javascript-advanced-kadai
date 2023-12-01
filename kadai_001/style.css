@@ -20,3 +20,8 @@ body {
 .mistyed {
   background-color: red;
 }
+.typedcount {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
